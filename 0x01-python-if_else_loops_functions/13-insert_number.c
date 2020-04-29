@@ -20,9 +20,21 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 
 	new_node->n = number;
-
-	while (tmp_rapido->next != NULL && tmp_rapido->n < number)
+	if ((*head)->n > number)
 	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+	while (tmp_rapido->next != NULL)
+	{
+		if (tmp_rapido->n > number)
+		{
+			tmp_lento->next = new_node;
+			new_node->next = tmp_rapido;
+			return (new_node);
+		}
+
 		if (tmp_lento->next != NULL && contador == 1)
 		{
 			tmp_lento = tmp_lento->next;
@@ -32,9 +44,7 @@ listint_t *insert_node(listint_t **head, int number)
 		contador++;
 		tmp_rapido = tmp_rapido->next;
 	}
-
-	tmp_lento->next = new_node;
-	new_node->next = tmp_rapido;
-
+	tmp_rapido->next = new_node;
+	new_node->next = NULL;
 	return (new_node);
 }

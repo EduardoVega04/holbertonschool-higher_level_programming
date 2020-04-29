@@ -7,7 +7,6 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	int contador = 0;
 	listint_t *tmp_lento = *head, *tmp_rapido = *head, *new_node = NULL;
 
 	new_node = malloc(sizeof(listint_t));

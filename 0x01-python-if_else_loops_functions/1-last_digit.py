@@ -6,12 +6,11 @@ last = abs(number) % 10
 if number < 0:
     last = last * -1
 
-mensaje1 = "The last digit of"
 if last > 5:
-    mensaje = "and is greather than 5"
+    mensaje = "greater than 5"
 elif last == 0:
-    mensaje = "and is zero"
+    mensaje = "0"
 else:
-    mensaje = "and is less than 6 and not 0"
+    mensaje = "less than 6 and not 0"
 
-print("{:s} {:d} is {:d} {:s}".format(mensaje1, number, last, mensaje))
+print("Last digit of {:d} is {:d} and is {:s}".format(number, last, mensaje))

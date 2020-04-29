@@ -8,25 +8,31 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	int contador = 0;
-	listint_t *tmp_lento = *head;
-	listint_t *tmp_rapido = *head;
-	listint_t *new_node = NULL;
-
-	if (head == NULL)
-		return (NULL);
+	listint_t *tmp_lento = *head, *tmp_rapido = *head, *new_node = NULL;
 
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
 		return (NULL);
 
 	new_node->n = number;
+	new_node->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+
 	if ((*head)->n > number)
 	{
 		new_node->next = *head;
 		*head = new_node;
-		return (*head);
+		return (new_node);
 	}
-	while (tmp_rapido->next != NULL)
+
+	tmp_rapido = (*head)->next;
+
+	while (tmp_rapido != NULL)
 	{
 		if (tmp_rapido->n > number)
 		{
@@ -34,17 +40,11 @@ listint_t *insert_node(listint_t **head, int number)
 			new_node->next = tmp_rapido;
 			return (new_node);
 		}
-
-		if (tmp_lento->next != NULL && contador == 1)
-		{
-			tmp_lento = tmp_lento->next;
-			contador = 0;
-		}
-
-		contador++;
+		tmp_lento = tmp_lento->next;
 		tmp_rapido = tmp_rapido->next;
 	}
-	tmp_rapido->next = new_node;
+
+	tmp_lento->next = new_node;
 	new_node->next = NULL;
 	return (new_node);
 }

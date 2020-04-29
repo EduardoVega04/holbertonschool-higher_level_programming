@@ -1,4 +1,4 @@
-B#include "lists.h"
+#include "lists.h"
 /**
  * insert_node - Insert a new node in a sorted linked list
  * @head: Head of the linked list

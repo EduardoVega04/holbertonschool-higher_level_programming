@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-f = open(1, "w")
-f.write("#pythoniscool\n")
+import os
+os.write(1, bytes("#pythoniscool\n", 'UTF-8'))

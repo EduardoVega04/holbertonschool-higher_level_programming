@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-import pythoniscool
+f = open(1, "w")
+f.write("#pythoniscool\n")

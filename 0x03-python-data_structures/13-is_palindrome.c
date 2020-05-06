@@ -6,28 +6,27 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = *head;
-	int array[1000];
-	int nodos = 0;
-	int i = 0;
+	int size;
+	int options[2048];
+	int i;
 
-	if (*head == NULL)
+	size = 0;
+	if (head == NULL || *head == NULL)
 		return (1);
 
-	while (tmp != NULL)
+	while(*head != NULL)
 	{
-		nodos++;
-		array[nodos - 1] = tmp->n;
-		tmp = tmp->next;
+		size++;
+		options[size - 1] = (*head)->n;
+		head = &(*head)->next;
 	}
 
-	for (i = 0; i < nodos / 2; i++)
+	for (i = 0; i < size / 2; i++)
 	{
-		if (array[i] != array[nodos - i - 1])
-		{
+		if (options[i] != options[size - i - 1])
 			return (0);
-		}
 	}
+
 	return (1);
 }
 

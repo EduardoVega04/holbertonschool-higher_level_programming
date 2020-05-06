@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 
-	array = malloc(sizeof(int) * 100);
+	array = malloc(sizeof(int) * nodos);
 	tmp = *head;
 
 	while (tmp != NULL)

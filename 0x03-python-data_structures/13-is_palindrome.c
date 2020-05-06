@@ -39,7 +39,11 @@ int is_palindrome(listint_t **head)
 			continue;
 		}
 		else
+		{
+			free(array);
 			return (0);
+		}
 	}
+	free(array);
 	return (1);
 }

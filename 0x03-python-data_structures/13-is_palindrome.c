@@ -17,8 +17,7 @@ int is_palindrome(listint_t **head)
 	while (tmp != NULL)
 	{
 		nodos++;
-		array[i] = tmp->n;
-		i++;
+		array[nodos - 1] = tmp->n;
 		tmp = tmp->next;
 	}
 

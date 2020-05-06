@@ -7,7 +7,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp = *head;
-	int *array = NULL;
+	int array[1000];
 	int nodos = 0;
 	int i = 0;
 
@@ -17,14 +17,6 @@ int is_palindrome(listint_t **head)
 	while (tmp != NULL)
 	{
 		nodos++;
-		tmp = tmp->next;
-	}
-
-	array = malloc(sizeof(int) * nodos);
-	tmp = *head;
-
-	while (tmp != NULL)
-	{
 		array[i] = tmp->n;
 		i++;
 		tmp = tmp->next;
@@ -32,14 +24,11 @@ int is_palindrome(listint_t **head)
 
 	for (i = 0; i < nodos / 2; i++)
 	{
-		if (array[i] != array[(nodos - 1) - i])
+		if (array[i] != array[nodos - i - 1])
 		{
-			free(array);
 			return (0);
 		}
 	}
-
-	free(array);
 	return (1);
 }
 

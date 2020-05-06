@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	int i = 0;
 	int j;
 
-	if (*head == NULL)
+	if (*head == NULL || head == NULL)
 		return (1);
 
 	while (tmp != NULL)
@@ -31,7 +31,7 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 
-	for (j = 0; j < nodos; j++)
+	for (j = 0; j < (nodos / 2); j++)
 	{
 		if (array[j] == array[nodos - 1])
 		{

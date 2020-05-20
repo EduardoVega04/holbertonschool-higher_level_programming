@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Creating a class Square"""
+"""Creating a new class called Square"""
 
 
 class Square:
-    """Our class Square, with the following attributes:"""
+    """class Square that defines a square by: (based on 0-square.py)"""
     def __init__(self, size=0):
-        """Now we initialize the size attribute as private"""
+        """Initialize Square with size attribute"""
         self.__size = size

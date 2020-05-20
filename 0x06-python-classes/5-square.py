@@ -6,7 +6,7 @@ class Square:
     """Creates our beautiful square with it's amazing attributes"""
     def __init__(self, size=0):
         """Initializes square"""
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -37,4 +37,4 @@ class Square:
         else:
             for i in range(vert):
                 for j in range(horiz):
-                    print("#")
+                    print("#", end="")

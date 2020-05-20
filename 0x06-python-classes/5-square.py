@@ -38,3 +38,4 @@ class Square:
             for i in range(vert):
                 for j in range(horiz):
                     print("#", end="")
+                print()

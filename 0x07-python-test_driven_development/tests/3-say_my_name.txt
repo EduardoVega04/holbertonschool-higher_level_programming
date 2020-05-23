@@ -171,3 +171,23 @@ TypeError: first_name must be a string
 
 >>> say_my_name("5j")
 My name is 5j 
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Eduardo", "A", "Vega")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(("Hola, "mundo"), "Vega")
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> say_my_name("Vega", ("Hola, "mundo"))
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> say_my_name(["Eduardo, "Vega"], "Vega")
+Traceback (most recent call last):
+SyntaxError: invalid syntax

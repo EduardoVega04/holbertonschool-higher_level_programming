@@ -3,6 +3,7 @@
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
+
 """Edge cases"""
 
 
@@ -14,17 +15,14 @@
 
 >>> add_integer('Eduardo', 9)
 Traceback (most recent call last):
-          ...
 TypeError: a must be an integer
 
 >>> add_integer()
 Traceback (most recent call last):
-          ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
 >>> add_integer(9, 'Hola')
 Traceback (most recent call last):
-          ...
 TypeError: b must be an integer
 
 >>> add_integer(1)
@@ -32,10 +30,123 @@ TypeError: b must be an integer
 
 >>> add_integer([123], [98, 87])
 Traceback (most recent call last):
-          ...
 TypeError: a must be an integer
 
 >>> add_integer(9, a)
 Traceback (most recent call last):
-          ...
 NameError: name 'a' is not defined
+
+>>> add_integer(Eduardo)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> add_integer('E', Eduardo)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> add_integer(Eduardo, Vega)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> add_integer(0, Vega)
+Traceback (most recent call last):
+NameError: name 'Vega' is not defined
+
+>>> add_integer(5j, 8):
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer (7i, 8j)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer (3, 7i)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer([9, 8, 5], Eduardo)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> add_integer((1, 2, 3), [4, 5, 6])
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer((), ())
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(a = 3, b = 3)
+6
+
+>>> add_integer({a: 3, b: 3}, {hola: mundo, hello: world})
+Traceback (most recent call last):
+NameError: name 'a' is not defined
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(True)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(False)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(True, Eduardo)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> add_integer(Eduardo, false)
+Traceback (most recent call last):
+NameError: name 'Eduardo' is not defined
+
+>>> class Eduardo:
+...    pass
+>>> add_integer(Eduardo, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2, Eduardo)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(Eduardo)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> def hola_mundo():
+...     pass
+>>> add_integer((hola_mundo())
+Traceback (most recent call last):
+SyntaxError: unexpected EOF while parsing
+
+>>> add_integer(2, hola_mundo())
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(x, hola_mundo())
+Traceback (most recent call last):
+NameError: name 'x' is not defined
+
+>>> add_integer(hola_mundo(), x)
+Traceback (most recent call last):
+NameError: name 'x' is not defined
+
+>>> add_integer(hola_mundo)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('-inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer

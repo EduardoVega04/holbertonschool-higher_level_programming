@@ -1,0 +1,41 @@
+"""Doctest for add_integer function"""
+
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+"""Edge cases"""
+
+
+>>> add_integer(2, 2)
+4
+
+>>> add_integer(-2, 3)
+1
+
+>>> add_integer('Eduardo', 9)
+Traceback (most recent call last):
+          ...
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+          ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(9, 'Hola')
+Traceback (most recent call last):
+          ...
+TypeError: b must be an integer
+
+>>> add_integer(1)
+99
+
+>>> add_integer([123], [98, 87])
+Traceback (most recent call last):
+          ...
+TypeError: a must be an integer
+
+>>> add_integer(9, a)
+Traceback (most recent call last):
+          ...
+NameError: name 'a' is not defined

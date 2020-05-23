@@ -7,9 +7,23 @@ B"""Doctest for 3-say_my_name.py"""
 """Edge cases"""
 
 
->>> say_my_name('Eduardo', 9)
+>>> say_my_name(9, "Eduardo")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+>>> say_my_name("Eduardo", 9)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Eduardo")
+My name is Eduardo 
+
+>>> say_my_name("", "Vega")
+My name is  Vega
+
+>>> say_my_name('Eduardo', 9)
+Traceback (most recent call last):
+TypeError: last_name must be a string
 
 >>> say_my_name(9, 'Eduardo')
 Traceback (most recent call last):
@@ -54,7 +68,7 @@ TypeError: first_name must be a string
 
 >>> say_my_name("Eduardo", False)
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 >>> say_my_name("Eduardo")
 My name is Eduardo 
@@ -104,7 +118,7 @@ TypeError: first_name must be a string
 
 >>> say_my_name("Eduardo", [1,2])
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 >>> say_my_name({eduardo: vega}, "Vega")
 Traceback (most recent call last):
@@ -143,7 +157,7 @@ TypeError: first_name must be a string
 
 >>> say_my_name("Eduardo", sum)
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 >>> say_my_name(sum, "Vega")
 Traceback (most recent call last):
@@ -167,7 +181,7 @@ TypeError: first_name must be a string
 
 >>> say_my_name("Eduardo", 5j)
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 >>> say_my_name("5j")
 My name is 5j 

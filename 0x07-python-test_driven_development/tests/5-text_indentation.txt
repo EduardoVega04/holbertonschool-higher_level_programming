@@ -27,3 +27,25 @@ Holberton School
 
 >>> text_indentation("Eduardo Vega")
 Eduardo Vega
+
+>>> text_indentation("?")
+?
+<BLANKLINE>
+
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+>>> text_indentation(":")
+:
+<BLANKLINE>
+
+>>> text_indentation(" ")
+<BLANKLINE>
+
+>>> text_indentation("HolbertonSchool.Software?Test")
+HolbertonSchool.
+<BLANKLINE>
+Software?
+<BLANKLINE>
+Test

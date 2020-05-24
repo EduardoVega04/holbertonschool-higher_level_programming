@@ -41,7 +41,7 @@ Eduardo Vega
 <BLANKLINE>
 
 >>> text_indentation(" ")
-<BLANKLINE>
+ 
 
 >>> text_indentation("HolbertonSchool.Software?Test")
 HolbertonSchool.
@@ -49,3 +49,9 @@ HolbertonSchool.
 Software?
 <BLANKLINE>
 Test
+
+>>> text_indentation("   Hello.  How are you?   ")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>

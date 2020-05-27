@@ -1,0 +1,1 @@
+<strong>Everything is an object<strong>

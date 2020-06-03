@@ -51,5 +51,4 @@
 >>> print(my_list)
 [9, 6]
 >>> my_list.print_sorted() == my_list
-[6, 9]
 False

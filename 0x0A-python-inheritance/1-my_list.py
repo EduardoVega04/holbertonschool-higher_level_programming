@@ -6,4 +6,4 @@ class MyList(list):
     """The main class"""
     def print_sorted(self):
         """Inherits everything from class list (datatype)"""
-        return (sorted(self))
+        print((sorted(self)))

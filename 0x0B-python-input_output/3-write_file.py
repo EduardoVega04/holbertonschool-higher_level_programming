@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Write a string to a file and return the number of written characters"""
 
 

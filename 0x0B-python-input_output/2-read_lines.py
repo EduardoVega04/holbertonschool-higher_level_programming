@@ -3,6 +3,7 @@
 
 
 def read_lines(filename="", nb_lines=0):
+    """The function to read and print n lines of a text file"""
     if nb_lines <= 0:
         with open(filename) as myFile:
             print(myFile.read(), end='')

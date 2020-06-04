@@ -4,7 +4,7 @@
 
 def append_write(filename="", text=""):
     """Our function to append text to the file.
-       Returns the number of characters writter       
+    Returns the number of characters writter
     """
     with open(filename, 'a') as myFile:
         return (myFile.write(text))

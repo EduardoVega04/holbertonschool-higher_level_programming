@@ -28,12 +28,12 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """Getter for height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """Setter for height"""
@@ -43,12 +43,12 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         else:
             self.__height = value
-    
+
     @property
     def x(self):
         """Getter for x"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """Setter for x"""
@@ -58,12 +58,12 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         else:
             self.__x = value
-    
+
     @property
     def y(self):
         """Getter for y"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """Setter for y"""
@@ -73,8 +73,3 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
-
-    
-
-
-

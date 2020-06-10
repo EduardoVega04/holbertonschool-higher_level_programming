@@ -96,13 +96,13 @@ class Rectangle(Base):
     def update(self, *args):
         """Updates the attributes of the Rectangle with *args"""
         largo = len(args)
-        if 0 < (largo - 1):
+        if 0 < largo:
             self.id = args[0]
-        if 1 < (largo - 1):
+        if 1 < largo:
             self.__width = args[1]
-        if 2 < (largo - 1):
+        if 2 < largo:
             self.__height = args[2]
-        if 3 < (largo - 1):
+        if 3 < largo:
             self.__x = args[3]
-        if 4 < (largo - 1):
+        if 4 < largo:
             self.__y = args[4]

@@ -83,9 +83,7 @@ class Rectangle(Base):
         print('\n' * self.__y, end='')
         for i in range(self.__height):
             print(" " * self.__y, end='')
-            for j in range(self.__width):
-                print("#", end='')
-            print()
+            print("#", * self.__width)
 
     def __str__(self):
         """User-friendly representation of the Rectangle"""

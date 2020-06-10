@@ -48,11 +48,11 @@ class Base:
             dummy = cls(1)
 
         dummy.update(**dictionary)
-
         return (dummy)
 
     @classmethod
     def load_from_file(cls):
+        """Returns a list of instances of type caller class, from a file"""
         filename = cls.__name__ + ".json"
         l = []
         try:

@@ -50,3 +50,19 @@ class Base:
         dummy.update(**dictionary)
 
         return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        """Return a list of instances"""
+        rep = []
+        filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, "r") as file:
+                rep = cls.from_json_string(file.read())
+            for a, b in enumerate(rep):
+                rep[a] = cls.create(**rep[a])
+        except:
+            pass
+
+        return (rep)

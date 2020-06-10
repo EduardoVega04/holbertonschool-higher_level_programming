@@ -58,8 +58,8 @@ class Base:
         filename = cls.__name__ + ".json"
 
         try:
-            with open(filename, "r") as file:
-                rep = cls.from_json_string(file.read())
+            with open(filename, "r") as my_file:
+                rep = cls.from_json_string(my_file.read())
             for a, b in enumerate(rep):
                 rep[a] = cls.create(**rep[a])
         except:

@@ -4,6 +4,8 @@
    and to avoid duplicating the same code
 """
 
+import json
+
 
 class Base:
     """Our base class for this project"""
@@ -16,3 +18,10 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of the argument"""
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
+        else:
+            return (json.dumps(list_dictionaries))

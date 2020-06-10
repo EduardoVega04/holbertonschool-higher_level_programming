@@ -93,16 +93,28 @@ class Rectangle(Base):
                                                                  self.__width,
                                                                  self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the attributes of the Rectangle with *args"""
         largo = len(args)
-        if 0 < largo:
-            self.id = args[0]
-        if 1 < largo:
-            self.__width = args[1]
-        if 2 < largo:
-            self.__height = args[2]
-        if 3 < largo:
-            self.__x = args[3]
-        if 4 < largo:
-            self.__y = args[4]
+        if largo > 0:
+            if 0 < largo:
+                self.id = args[0]
+            if 1 < largo:
+                self.__width = args[1]
+            if 2 < largo:
+                self.__height = args[2]
+            if 3 < largo:
+                self.__x = args[3]
+            if 4 < largo:
+                self.__y = args[4]
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__y = kwargs['y']

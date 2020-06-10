@@ -9,7 +9,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Construtor for our class"""
         super().__init__(size, size, x, y, id)
-        self.size = size               
+        self.size = size
 
     def __srt__(self):
         """User-friendly representation of the square"""

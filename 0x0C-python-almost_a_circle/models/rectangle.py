@@ -94,7 +94,7 @@ class Rectangle(Base):
                                                                  self.__height)
 
     def update(self, *args, **kwargs):
-        """Updates the attributes of the Rectangle with *args"""
+        """Updates the attributes of the Rectangle"""
         largo = len(args)
         if largo > 0:
             if 0 < largo:

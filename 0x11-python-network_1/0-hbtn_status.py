@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Default doctstring. """
+"""Default docstring"""
 import urllib.request
+
 
 if __name__ == "__main__":
     my_url = 'https://intranet.hbtn.io/status'

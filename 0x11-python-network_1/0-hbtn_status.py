@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Default docstring"""
-import urllib.request
+"""initializate"""
+from urllib.request import urlopen
 
 
-if __name__ == "__main__":
-    my_url = 'https://intranet.hbtn.io/status'
-    with urllib.request.urlopen(my_url) as response:
+def hbtn_status_0():
+    """function show my status"""
+    with urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
+        utf8 = html.decode('utf-8')
+        print("Body response:\n\t- type: {}".format(type(html)))
+        print("\t- content: {}\n\t- utf8 content: {}".
+              format(html, utf8, end=""))
 
-        print("Body response:")
-        print("\t- type: {}".format(type(html)))
-        print("\t- content: {}".format(html))
-        print("\t- utf8 content: {}".format(html.decode('utf8')))
+
+if __name__ == '__main__':
+    hbtn_status_0()

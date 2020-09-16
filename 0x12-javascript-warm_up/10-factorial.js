@@ -1,4 +1,6 @@
 #!/usr/bin/node
+/* Prints a factorial */
+
 function factorial (a) {
   const num = parseInt(a);
   if (isNaN(num)) {

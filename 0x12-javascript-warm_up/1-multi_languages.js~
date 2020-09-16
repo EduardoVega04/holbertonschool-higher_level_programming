@@ -1,0 +1,4 @@
+#!/usr/bin/node
+/* Print different strings */
+let myVar = 'C is fun\n Python is cool\n Javascript is amazing';
+console.log(myVar);

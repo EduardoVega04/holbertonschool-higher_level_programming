@@ -8,8 +8,6 @@ let content = '';
 req(url + process.argv[2], function (err, query, data) {
   if (err) {
     console.log(err);
-  } else if (query.statusCode !== 200) {
-
   } else {
     content = JSON.parse(data);
     console.log(content.title);

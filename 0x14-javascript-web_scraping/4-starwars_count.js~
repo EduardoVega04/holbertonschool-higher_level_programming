@@ -1,0 +1,36 @@
+#!/usr/bin/node
+/* Script that prints the number of movies where the character “Wedge Antilles” is present */
+req = request('request');
+let result_api = '';
+
+req(process.argv[2], function(error, status, data) {
+    if (error) {
+	console.log(error);
+    } else if (req.statusCode !== 200) {
+	return;
+    } else {
+	result_api = JSON.parse(data);
+	let list_films = result_api["films"];
+	let length_films = list_films.length;
+	let total = 0;
+	for (let i = 0; i < length_films; i++) {
+	    req(list_films[i], function(error, status, characters) {
+		if (error) {
+		    console.log(error);
+		} else if (req.statusCode !== 200) {
+		    return;
+		}
+		else {
+		    let parsed_characters = JSON.parse(characters);
+		    if (parsed_characters["characters"].includes('https://swapi-api.hbtn.io/api/people/18/'){
+			total += 1;
+		    }
+		}
+		
+	    });
+		console.log(total);
+		
+	}
+
+    }
+});

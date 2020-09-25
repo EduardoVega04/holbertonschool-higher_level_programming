@@ -1,1 +1,1 @@
-<strong>Javascript Web JQuery<strong>
+<strong>Javascript Web JQuery and AJAX<strong>

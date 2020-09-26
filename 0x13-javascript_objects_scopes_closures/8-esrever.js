@@ -3,13 +3,13 @@
 exports.esrever = function (list) {
   let swap = null;
   const listLength = list.length;
-  const j = listLength - 1;
+  let j = listLength - 1;
 
-  for (let i = 0; i < listLength; i++) {
+  for (let i = 0; i < j; i++) {
     swap = list[i];
     list[i] = list[j];
     list[j] = swap;
+    j--;
   }
-
   return list;
 };

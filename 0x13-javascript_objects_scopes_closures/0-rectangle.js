@@ -1,6 +1,3 @@
 #!/usr/bin/node
-/* Empty class that defines a rectangle */
-class Rectangle {
-    constructor(){        
-    }
-}
+/* Empty class that defines a rectangle and can be imported elsewhere */
+module.export = class Rectangle {}

@@ -1,3 +1,3 @@
 #!/usr/bin/node
 /* Empty class that defines a rectangle and can be imported elsewhere */
-class Rectangle {};
+export default class Rectangle {};
